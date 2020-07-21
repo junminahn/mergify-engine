@@ -671,7 +671,9 @@ async def run_forever():
 
 
 def main():
+    LOG.info("before logs.setup_logging()")
     logs.setup_logging()
+    LOG.info("after logs.setup_logging()")
     asyncio.run(run_forever())
 
 
