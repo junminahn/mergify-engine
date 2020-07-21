@@ -659,8 +659,13 @@ class Worker:
 
 async def run_forever():
     worker = Worker()
+    LOG.info("afeter worker = Worker()")
+
     worker.setup_signals()
+    LOG.info("after worker.setup_signals()")
+
     worker.start()
+    LOG.info("after worker.start()")
     await worker.wait_shutdown_complete()
     LOG.info("Exiting...")
 

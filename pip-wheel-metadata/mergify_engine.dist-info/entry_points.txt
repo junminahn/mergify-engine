@@ -1,0 +1,24 @@
+[console_scripts]
+mergify-clear-token-cache = mergify_engine.web_cli:clear_token_cache
+mergify-debug = mergify_engine.debug:main
+mergify-engine-worker = mergify_engine.worker:main
+mergify-queues = mergify_engine.web_cli:queues
+mergify-refresher = mergify_engine.web_cli:refresher
+mergify-worker-status = mergify_engine.worker:status
+
+[mergify_actions]
+assign = mergify_engine.actions.assign:AssignAction
+backport = mergify_engine.actions.backport:BackportAction
+close = mergify_engine.actions.close:CloseAction
+comment = mergify_engine.actions.comment:CommentAction
+copy = mergify_engine.actions.copy:CopyAction
+delete_head_branch = mergify_engine.actions.delete_head_branch:DeleteHeadBranchAction
+dismiss_reviews = mergify_engine.actions.dismiss_reviews:DismissReviewsAction
+label = mergify_engine.actions.label:LabelAction
+merge = mergify_engine.actions.merge.action:MergeAction
+rebase = mergify_engine.actions.rebase:RebaseAction
+refresh = mergify_engine.actions.refresh:RefreshAction
+request_reviews = mergify_engine.actions.request_reviews:RequestReviewsAction
+review = mergify_engine.actions.review:ReviewAction
+update = mergify_engine.actions.update:UpdateAction
+
